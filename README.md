@@ -6,6 +6,14 @@ images. The decoding only requires selecting some subset of these n shadow image
 stacking them on top of each other. Main advantage of this scheme is mathematical computation complexity is reduced 
 compared to conventional cryptographic techniques.
 
+Original Image:
+![Original image](https://user-images.githubusercontent.com/88589681/206241635-d597d2c4-d28b-425f-bd40-a44b0864174e.png)
 
+Share 1 Image:
+![Share1](https://user-images.githubusercontent.com/88589681/206241667-923e5576-2948-457d-b9d1-26d2bbda6b0c.png)
 
-![image](https://user-images.githubusercontent.com/88589681/206239632-22c62ed1-197e-4a9f-9b1b-f6332e2f5eb7.png)
+Share 2 Image:
+![Share 2](https://user-images.githubusercontent.com/88589681/206241695-2693a2c2-6a8b-4553-8581-46b64f938f77.png)
+
+Final Image:
+![Final image](https://user-images.githubusercontent.com/88589681/206241728-88bdf7e3-c5f7-41eb-857d-f028a2cf835d.png)
