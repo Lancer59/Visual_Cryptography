@@ -5,7 +5,7 @@ import numpy as np
 
 #Opening the image and displaying it
 img = Image.open('image.png').convert('L')
-img.show()
+img.show(title="Original Image")
 
 #Converting image to binary format
 thresh=100    #thresh = Threshold
@@ -87,8 +87,9 @@ for x in range(width):
 #}
 
 #display share1 and share2
-s1.show()
-s2.show()
+
+s1.show(title="Share 1")
+s2.show(title="Share 2")
 
 #(2) Converting the shares from(0,255) to (0,1)image
 #{
@@ -131,4 +132,6 @@ for x in range(width):
             #put 1 inplace of 255 to obtain binary image
 
 #Final Output
-de.show()
+de.show(title="Decrypted Image")
+
+print("Enrcyption and Decryption Successful")
