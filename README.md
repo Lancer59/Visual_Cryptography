@@ -20,3 +20,6 @@ Share 2 Image:
 Final Image:
 ![Final image](https://user-images.githubusercontent.com/88589681/206502459-c67d2725-0895-40b2-88ae-b0f461e0304a.png)
 
+image1 file, Before applying the algorithm and after
+![Screenshot (8)](https://user-images.githubusercontent.com/88589681/206511994-cd4abb8e-0c12-4778-b765-b32f6c8fdafd.png)
+
