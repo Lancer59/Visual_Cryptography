@@ -23,68 +23,94 @@ s1=[]
 s2=[]
 de=[]
 
-#Initializing the above declared lists
+#Modifing the above declared list into 2D based on height
 for x in range(height):
     s1.append([])
     s2.append([])
     de.append([])
-    for y in range(width):
-        s1[x].append(0)
-        s2[x].append(0)
-        de[x].append(0)
 
 #Converting image to numpy array
 img=np.asarray(img)        
 
 #Encryption
 for x in range(height):
-    for y in range(0,width*2,2):#y = 0,2,4,6,..width-1        
+    for y in range(width):      
+        #Selecting random number 0 or 1
         z = randint(0,1)
-        #Bypassing second for loop step value.
-        if(y%2!=0 and y!=0):
-            y=y-1
-            #y=0,1,2,3,4,..width-1
-
-        #Removing ListOutOfIndex error 
-        if(y>=width):
-            break
 
         #Encryption algorithm
         if(img[x][y]==1):
             if(z==1):
-                s1[x].insert(y,1)
-                s1[x].insert(y+1,0)
-                s2[x].insert(y,1)
-                s2[x].insert(y+1,0)
+                s1[x].insert((2*y)-1,1)
+                s1[x].insert(2*y,0)
+                s2[x].insert((2*y)-1,1)
+                s2[x].insert(2*y,0)
             else:
-                s1[x].insert(y,0)
-                s1[x].insert(y+1,1)
-                s2[x].insert(y,0)
-                s2[x].insert(y+1,1)
+                s1[x].insert((2*y)-1,0)
+                s1[x].insert(2*y,1)
+                s2[x].insert((2*y)-1,0)
+                s2[x].insert(2*y,1)
         else:
             if(z==1):
-                s1[x].insert(y,1)
-                s1[x].insert(y+1,0)
-                s2[x].insert(y,0)
-                s2[x].insert(y+1,1)
+                s1[x].insert((2*y)-1,1)
+                s1[x].insert(2*y,0)
+                s2[x].insert((2*y)-1,0)
+                s2[x].insert(2*y,1)
             else:
-                s1[x].insert(y,0)
-                s1[x].insert(y+1,1)
-                s2[x].insert(y,1)
-                s2[x].insert(y+1,0)
+                s1[x].insert((2*y)-1,0)
+                s1[x].insert(2*y,1)
+                s2[x].insert((2*y)-1,1)
+                s2[x].insert(2*y,0)
 
-#Displaying share1 & share2
+#Convertig share1 & share2 into numpy array then into image.
 s1=np.asarray(s1)
 s2=np.asarray(s2)
 s1=Image.fromarray(s1)
 s2=Image.fromarray(s2)
+
+#Remove both (1) and (2) code blocks for faster execution of program but remember that the share1 and share2 wont be displayed the correct way.
+
+
+#(1) Converting the shares from (0,1)image to (0,255)image
+#{
+width,height=s1.size    
+for x in range(width):
+    for y in range(height):
+        if s1.getpixel((x,y)) == 1:
+            s1.putpixel((x,y),255)
+        else:
+            s1.putpixel((x,y),0) 
+        if s2.getpixel((x,y)) == 1:
+            s2.putpixel((x,y),255)
+        else:
+            s2.putpixel((x,y),0) 
+#}
+
+#display share1 and share2
 s1.show()
 s2.show()
 
+#(2) Converting the shares from(0,255) to (0,1)image
+#{
+for x in range(width):
+    for y in range(height):
+        if s1.getpixel((x,y)) == 255:
+            s1.putpixel((x,y),1)
+        else:
+            s1.putpixel((x,y),0) 
+        if s2.getpixel((x,y)) == 255:
+            s2.putpixel((x,y),1)
+        else:
+            s2.putpixel((x,y),0) 
+#}
+
+
 #Initializing width and height of share
 width,height=s1.size
+#Converting shares from image to normal list
 s1=np.asarray(s1).tolist()
 s2=np.asarray(s2).tolist()
+
 
 #Decryption 
 for x in range(height):
@@ -106,8 +132,3 @@ for x in range(width):
 
 #Final Output
 de.show()
-
-
-
-
-
