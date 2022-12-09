@@ -7,7 +7,8 @@ stacking them on top of each other. Main advantage of this scheme is mathematica
 compared to conventional cryptographic techniques.
 
 
-#ShareDoubleWidth
+#ShareDoubleWidth#
+
 Original Image:
 ![Original image](https://user-images.githubusercontent.com/88589681/206241635-d597d2c4-d28b-425f-bd40-a44b0864174e.png)
 
