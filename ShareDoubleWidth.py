@@ -4,7 +4,7 @@ from PIL import Image
 import numpy as np
 
 #Opening the image and displaying it
-img = Image.open('image.png').convert('L')
+img = Image.open('image1.png').convert('L')
 img.show(title="Original Image")
 
 #Converting image to binary format
