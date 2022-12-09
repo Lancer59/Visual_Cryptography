@@ -1,4 +1,4 @@
-# Visual_Cryptography
+## Visual_Cryptography
  
 Visual Cryptography Scheme (VCS) is an encryption method used to encode secret written materials. The idea is to 
 convert the written material into a binary image and encode this image into n shadow image, it is also called as shares of 
@@ -6,6 +6,8 @@ images. The decoding only requires selecting some subset of these n shadow image
 stacking them on top of each other. Main advantage of this scheme is mathematical computation complexity is reduced 
 compared to conventional cryptographic techniques.
 
+
+#ShareDoubleWidth
 Original Image:
 ![Original image](https://user-images.githubusercontent.com/88589681/206241635-d597d2c4-d28b-425f-bd40-a44b0864174e.png)
 
